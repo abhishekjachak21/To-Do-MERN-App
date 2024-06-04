@@ -29,9 +29,9 @@ mongoose.connect(process.env.MONGO_URI, {
 })
 
 //api endpoints
-app.use("/api/user", userRouter)
-app.use("/api/task", taskRouter)
-app.use("/api/forgotPassword", forgotPasswordRouter)
+app.use("/user", userRouter)
+app.use("/task", taskRouter)
+app.use("/forgotPassword", forgotPasswordRouter)
 
 //listen
 app.listen(port, () => console.log(`Listening on localhost:${port}`))
