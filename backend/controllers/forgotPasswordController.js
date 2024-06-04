@@ -21,7 +21,7 @@ dotenv.config()
   await user.save();
   
   //Send email with reset token
-  const resetUrl = `https://todo-app-b96a5.web.app/resetPassword?token=${resetToken}`;
+  const resetUrl = `https://todoappv3.vercel.app/resetPassword?token=${resetToken}`;
   var transporter = createTransport({
     
       service: 'gmail',
