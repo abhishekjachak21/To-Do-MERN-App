@@ -14,7 +14,7 @@ function Header() {
 
     return (
         <div>
-            <nav className='header bg-slate-200 flex justify-between items-center'>
+            <nav className='header bg-yellow-200 flex justify-between items-center'>
                 <div className="logo w-1/4 text-center">
                     <NavLink to="/">Todo App</NavLink>
                 </div>
@@ -22,7 +22,7 @@ function Header() {
                     {
                         token ? (
                             <div className='flex items-center justify-center'>
-                                <p className='mr-5'>welcome, <span className=' text-xl text-blue-800 capitalize'>{user.name}</span></p>
+                                <p className='mr-5'>Welcome, <span className=' text-xl text-blue-800 capitalize'>{user.name}</span></p>
                                 <button onClick={logout} className="logout mr-4">Logout</button>
                             </div>
                         ) : (

@@ -5,7 +5,7 @@ function TaskIndicator() {
     return ( 
         <div className=' flex-grow'>
             <nav>
-                <ul className='flex gap-3 justify-between p-3 bg-slate-400 rounded-lg shadow-2xl'>
+                <ul className='flex gap-3 justify-between p-3 bg-yellow-200 rounded-lg shadow-2xl'>
                     <li>
                         <NavLink to="/">All Task</NavLink>
                     </li>

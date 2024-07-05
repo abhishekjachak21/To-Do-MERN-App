@@ -11,7 +11,7 @@ function CreateTask() {
     const {userToken} = useContext(TokenContext)
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
-    // const [toast, setToast] = useState();
+
     const handleAdd = async (e) => {
         e.preventDefault();
         try {
@@ -20,8 +20,7 @@ function CreateTask() {
                 Authorization: `Bearer ${userToken}`
               }
             })
-            //setToast(res.data)
-            // showToast();
+    
           } catch (error) {
             console.log(error);
           }
@@ -34,15 +33,6 @@ function CreateTask() {
         setDescription("")
     }
 
-    // const showToast = () => {
-    //     const toast = document.getElementById('toast');
-    //     toast.style.display = "block"
-    //     setTimeout(hideToast,2000)
-    // }
-    // const hideToast = () => {
-    //     const toast = document.getElementById('toast');
-    //     toast.style.display = "none"
-    // }
     return (
         <div className="addContainer md:w-1/3 md:mx-auto mx-3 mt-3 flex justify-center">
             <div className='w-11/12'>
@@ -68,7 +58,7 @@ function CreateTask() {
                             required
                             onChange={(e) => setDescription(e.target.value)}
                             style={{ resize: "none" }}
-                            className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' />
+                            className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' />
                     </div>
                     <div className='flex justify-center'>
                         <button
