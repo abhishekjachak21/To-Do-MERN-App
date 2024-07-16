@@ -5,7 +5,8 @@ const taskInstance = mongoose.Schema({
     description:{type:String, required:true},
     userId:{type:String, required:true},
     completed:{type:Boolean, required:true}
-}, {timestamps:true});
+}, 
+{timestamps:true});
 
 const taskModel = mongoose.model("Task", taskInstance);
 export default taskModel;
