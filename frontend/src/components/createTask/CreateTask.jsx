@@ -29,8 +29,8 @@ function CreateTask() {
             title,
             description
         })
-        setTitle("")
-        setDescription("")
+        setTitle("")   //ise comment kiya toh, phle ka likha hua title erase nhi hota
+        setDescription("") //same with desc
     }
 
     return (
