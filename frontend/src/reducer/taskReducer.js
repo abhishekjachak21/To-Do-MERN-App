@@ -1,3 +1,6 @@
+//map, filter, spread operator used here.
+//JS is the master of all. Improve JS before React.js bro!!
+
 function taskReducer(tasks, action) {
     console.log("taskreducer");
     switch (action.type) {

@@ -16,11 +16,15 @@ import Register from './components/Register.jsx';
 import ForgotPassword from './components/forgotPassword/ForgotPassword.jsx';
 import ResetPassword from './components/forgotPassword/ResetPassword.jsx';
 import axios from './Axios/axios.js';
+
+
 function App() {
   const token = JSON.parse(localStorage.getItem("authToken"));
   const [tasks, dispatch] = useReducer(taskReducer, [])
   const [userToken, tokenDispatch] = useReducer(tokenReducer, token)
   const [user, userDispatch] = useReducer(userReducer, {})
+
+
   useEffect(() => {
     console.log("App.js");
     const fetchUser = async () => {
@@ -42,6 +46,8 @@ function App() {
       fetchUser()
     }
   },[userToken])
+
+
   useEffect(() => {
     const fetchTasks = async () => {
       try {
@@ -60,6 +66,8 @@ function App() {
       fetchTasks()
     }
   },[userToken])
+
+  
   return (
     <BrowserRouter>
       <TokenContext.Provider value={{userToken, tokenDispatch, user, userDispatch}}>
