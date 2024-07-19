@@ -67,7 +67,7 @@ function App() {
     }
   },[userToken])
 
-  
+
   return (
     <BrowserRouter>
       <TokenContext.Provider value={{userToken, tokenDispatch, user, userDispatch}}>
@@ -75,15 +75,13 @@ function App() {
           <Routes>
             <Route path="/" element={<Header />}>
               <Route path='/' element={token ? <Layout /> : <Login />}>
-                <Route index element={<AllTask />} />
-                <Route path="active" element={<Active />} />
-                <Route path="completed" element={<Completed />} />
-              </Route>
+                 <Route index element={<AllTask />} />
+                 <Route path="active" element={<Active />} />
+                 <Route path="completed" element={<Completed />} /></Route>
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/forgotPassword" element={<ForgotPassword />} />
-              <Route path="/resetPassword" element={<ResetPassword />} />
-            </Route>
+              <Route path="/resetPassword" element={<ResetPassword />} /> </Route>
           </Routes>
         </TaskContext.Provider>
       </TokenContext.Provider>

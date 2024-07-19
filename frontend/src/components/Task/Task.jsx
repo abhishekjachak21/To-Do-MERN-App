@@ -3,14 +3,15 @@ import moment from 'moment';
 import "./task.css";
 import { useContext } from 'react';
 import TaskContext from '../../context/TaskContext';
-import DeleteIcon from '@mui/icons-material/Delete';
+import CancelIcon from '@mui/icons-material/Cancel';
+
+
 function Task({ task, id }) {
     const { dispatch } = useContext(TaskContext);
 
     const handleRemove = (e) => {
         e.preventDefault();
         
-
         dispatch({
             type: "REMOVE_TASK",
             id
@@ -28,9 +29,10 @@ function Task({ task, id }) {
             <div className="mark-done">
                 <input type="checkbox" className="checkbox" onChange={handleMarkDone} checked={task.completed} />
             </div>
+           
             <div className="task-info text-slate-900 text-sm w-10/12">
                 <h4 className="task-title text-lg capitalize">{task.title}</h4>
-                <p className="task-description">{task.description}</p>
+                <p className="task-description ">{task.description}</p>
                 <div className=' italic opacity-60'>
                     {
                         task?.createdAt ? (
@@ -41,12 +43,13 @@ function Task({ task, id }) {
                     }
                 </div>
             </div>
+           
             <div className="remove-task text-sm text-white">
-                <DeleteIcon
-                    style={{ fontSize: 30, cursor: "pointer" }}
+                <CancelIcon
+                    style={{ fontSize: 38, cursor: "pointer" }}
                     size="large"
                     onClick={handleRemove}
-                    className="remove-task-btn bg-blue-700 rounded-full border-2 shadow-2xl border-white p-1" />
+                    className="remove-task-btn bg-red-700 rounded-full border-2 shadow-2xl border-white p-1" />
             </div>
         </div>
     );
