@@ -36,3 +36,9 @@ function taskReducer(tasks, action) {
 }
 
 export default taskReducer;
+
+//'taskReducer' is a function that helps manage the state of tasks 
+//in an application. It takes the current state of tasks (an array)
+//and an action (an object describing what change to make) and
+//returns a new state based on the action.
+
