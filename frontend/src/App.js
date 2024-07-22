@@ -35,7 +35,7 @@ function App() {
             Authorization: `Bearer ${userToken}`
           }
         })
-        //tokenDispatch({type: "SET_TOKEN", payload: res.token})
+        //tokenDispatch({type: "SET_TOKEN", payload: res.tokenn})
         console.log("res.data: ", res.data);
         userDispatch({type: "SET_USER", payload:res.data.user})
       } catch (error) {
