@@ -38,7 +38,7 @@ function CreateTask() {
             <div className='w-11/12'>
                 <form onSubmit={handleAdd}>
                     <div>
-                        <label htmlFor="title">Title</label>
+                        <label htmlFor="title" className='text-2xl'>Title</label>
                         <input
                             type="text"
                             name="title"
@@ -49,7 +49,7 @@ function CreateTask() {
                             className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' />
                     </div>
                     <div className='my-3'>
-                        <label htmlFor="description">Description</label>
+                        <label htmlFor="description"  className='text-2xl'>Description</label>
                         <textarea
                             rows={5}
                             name="description"
@@ -63,7 +63,7 @@ function CreateTask() {
                     <div className='flex justify-center'>
                         <button
                             type='submit'
-                            className=' bg-blue-700 rounded-md text-white px-5 py-1 '
+                            className=' bg-blue-700 rounded-md hover:bg-blue-200 text-white px-5 py-1 '
                         >Add</button>
                     </div>
                 </form>
