@@ -9,7 +9,7 @@ function Completed() {
                 (tasks.length !== 0) ? (
                     tasks.map((task, index) => {
                         return (
-                            task.completed && <CompletedTask
+                            task.completed && <CompletedTask               //task.completed is a condition. If it’s true, the CompletedTask component is rendered.
                                 key={index}
                                 task={task}
                                 id={index}
