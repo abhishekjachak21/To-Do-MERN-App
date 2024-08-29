@@ -6,7 +6,7 @@ function Layout() {
     return (
         <div>
             <div className='flex flex-col md:flex-row md:justify-between'>
-                <CreateTask />
+                        <CreateTask />
                 <div className='task-container w-auto mx-5 md:w-1/3 mt-3'>
                     <div className='outlet'>
                         <Outlet />
